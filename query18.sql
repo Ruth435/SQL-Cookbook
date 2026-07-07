@@ -1,0 +1,1 @@
+SELECT email FROM employees JOIN customers ON employees.employeeNumber = customers.salesRepEmployeeNumber WHERE jobTitle = "Sales Rep" GROUP BY email HAVING COUNT(CustomerNumber) < (SELECT COUNT(*) FROM customers WHERE salesRepEmployeeNumber = 1166);

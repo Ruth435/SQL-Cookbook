@@ -1,0 +1,1 @@
+SELECT CustomerName, ROUND(SUM(amount), 2) AS total FROM payments, customers WHERE customers.customerNumber = payments.customerNumber AND customers.city = "Paris" GROUP BY customers.customerNumber HAVING COUNT(*) > 4;

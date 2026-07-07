@@ -1,0 +1,1 @@
+SELECT ROUND(SUM(priceEach * quantityOrdered),2) AS totalCost FROM orderdetails JOIN orders ON orderdetails.orderNumber = orders.orderNumber WHERE customerNumber = 121;
